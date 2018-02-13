@@ -1,0 +1,638 @@
+{
+    "place-lake": {
+        "name": "Boston College",
+        "led": 306
+    },
+    "place-sougr": {
+        "name": "South Street",
+        "led": 305
+    },
+    "place-chill": {
+        "name": "Chestnut Hill Ave.",
+        "led": 307
+    },
+    "place-chswk": {
+        "name": "Chiswick Road",
+        "led": 308
+    },
+    "place-sthld": {
+        "name": "Sutherland Road",
+        "led": 304
+    },
+    "place-wascm": {
+        "name": "Washington Street",
+        "led": 303
+    },
+    "place-wrnst": {
+        "name": "Warren Street",
+        "led": 302
+    },
+    "place-alsgr": {
+        "name": "Allston Street",
+        "led": 301
+    },
+    "place-grigg": {
+        "name": "Griggs Street",
+        "led": 300
+    },
+    "place-harvd": {
+        "name": "Harvard Ave.",
+        "led": 299
+    },
+    "place-brico": {
+        "name": "Packards Corner",
+        "led": 298
+    },
+    "place-babck": {
+        "name": "Babcock Street",
+        "led": 297
+    },
+    "place-plsgr": {
+        "name": "Pleasant Street",
+        "led": 296
+    },
+    "place-stplb": {
+        "name": "Saint Paul Street",
+        "led": 295
+    },
+    "place-buwst": {
+        "name": "Boston Univ. West",
+        "led": 294
+    },
+    "place-bucen": {
+        "name": "Boston Univ. Central",
+        "led": 293
+    },
+    "place-buest": {
+        "name": "Boston Univ. East",
+        "led": 289
+    },
+    "place-bland": {
+        "name": "Blandford Street",
+        "led": 288
+    },
+    "place-clmnl": {
+        "name": "Cleveland Circle",
+        "led": 278
+    },
+    "place-engav": {
+        "name": "Englewood Ave.",
+        "led": 279
+    },
+    "place-denrd": {
+        "name": "Dean Road",
+        "led": 280
+    },
+    "place-tapst": {
+        "name": "Tappan Street",
+        "led": 281
+    },
+    "place-bcnwa": {
+        "name": "Washington Square",
+        "led": 282
+    },
+    "place-fbkst": {
+        "name": "Fairbanks Street",
+        "led": 283
+    },
+    "place-bndhl": {
+        "name": "Brandon Hall",
+        "led": 284
+    },
+    "place-sumav": {
+        "name": "Summit Ave.",
+        "led": 285
+    },
+    "place-cool": {
+        "name": "Coolidge Corner",
+        "led": 286
+    },
+    "place-stpul": {
+        "name": "Saint Paul Street",
+        "led": 287
+    },
+    "place-kntst": {
+        "name": "Kent Street",
+        "led": 290
+    },
+    "place-hwsst": {
+        "name": "Hawes Street",
+        "led": 292
+    },
+    "place-smary": {
+        "name": "Saint Marys Street",
+        "led": 291
+    },
+    "place-river": {
+        "name": "Riverside",
+        "led": 277
+    },
+    "place-woodl": {
+        "name": "Woodland",
+        "led": 276
+    },
+    "place-waban": {
+        "name": "Waban",
+        "led": 275
+    },
+    "place-eliot": {
+        "name": "Eliot",
+        "led": 274
+    },
+    "place-newtn": {
+        "name": "Newton Highlands",
+        "led": 273
+    },
+    "place-newto": {
+        "name": "Newton Centre",
+        "led": 272
+    },
+    "place-chhil": {
+        "name": "Chestnut Hill",
+        "led": 271
+    },
+    "place-rsmnl": {
+        "name": "Reservoir",
+        "led": 270
+    },
+    "place-bcnfd": {
+        "name": "Beaconsfield",
+        "led": 269
+    },
+    "place-brkhl": {
+        "name": "Brookline Hills",
+        "led": 268
+    },
+    "place-bvmnl": {
+        "name": "Brookline Village",
+        "led": 267
+    },
+    "place-longw": {
+        "name": "Longwood",
+        "led": 266
+    },
+    "place-fenwy": {
+        "name": "Fenway",
+        "led": 265
+    },
+    "place-kencl": {
+        "name": "Kenmore",
+        "led": 264
+    },
+    "place-hymnl": {
+        "name": "Hynes Convention Center",
+        "led": 37
+    },
+    "place-hsmnl": {
+        "name": "Heath Street",
+        "led": 48
+    },
+    "place-bckhl": {
+        "name": "Back of the Hill",
+        "led": 258
+    },
+    "place-rvrwy": {
+        "name": "Riverway",
+        "led": 47
+    },
+    "place-mispk": {
+        "name": "Mission Park",
+        "led": 46
+    },
+    "place-fenwd": {
+        "name": "Fenwood Road",
+        "led": 45
+    },
+    "place-brmnl": {
+        "name": "Brigham Circle",
+        "led": 44
+    },
+    "place-lngmd": {
+        "name": "Longwood Medical Area",
+        "led": 43
+    },
+    "place-mfa": {
+        "name": "Museum of Fine Arts",
+        "led": 42
+    },
+    "place-nuniv": {
+        "name": "Northeastern University",
+        "led": 41
+    },
+    "place-symcl": {
+        "name": "Symphony",
+        "led": 40
+    },
+    "place-prmnl": {
+        "name": "Prudential",
+        "led": 39
+    },
+    "place-coecl": {
+        "name": "Copley",
+        "led": 38
+    },
+    "place-armnl": {
+        "name": "Arlington",
+        "led": 36
+    },
+    "place-boyls": {
+        "name": "Boylston",
+        "led": 15
+    },
+    "place-alfcl": {
+        "name": "Alewife",
+        "led": 32
+    },
+    "place-davis": {
+        "name": "Davis",
+        "led": 31
+    },
+    "place-portr": {
+        "name": "Porter",
+        "led": 33
+    },
+    "place-harsq": {
+        "name": "Harvard",
+        "led": 30
+    },
+    "place-cntsq": {
+        "name": "Central",
+        "led": 34
+    },
+    "place-knncl": {
+        "name": "Kendall/MIT",
+        "led": 29
+    },
+    "place-chmnl": {
+        "name": "Charles/MGH",
+        "led": 35
+    },
+    "place-pktrm": {
+        "name": "Park Street",
+        "led": 16
+    },
+    "place-dwnxg": {
+        "name": "Downtown Crossing",
+        "led": 481
+    },
+    "place-sstat": {
+        "name": "South Station",
+        "led": 480
+    },
+    "place-crtst": {
+        "name": "Courthouse",
+        "led": 479
+    },
+    "17091": {
+        "name": "Terminal A",
+        "led": 487
+    },
+    "27092": {
+        "name": "Terminal B Stop 1 - Arrivals Level",
+        "led": 488
+    },
+    "17093": {
+        "name": "Terminal B Stop 2 - Arrivals Level",
+        "led": 486
+    },
+    "17094": {
+        "name": "Terminal C - Arrivals Level",
+        "led": 489
+    },
+    "17095": {
+        "name": "Terminal E - Arrivals Level",
+        "led": 485
+    },
+    "place-wtcst": {
+        "name": "World Trade Center",
+        "led": 472
+    },
+    "74624": {
+        "name": "Silver Line Way after Manulife Building",
+        "led": 478
+    },
+    "247": {
+        "name": "Northern Ave @ Harbor St",
+        "led": 477
+    },
+    "30249": {
+        "name": "Northern Ave @ Tide St",
+        "led": 476
+    },
+    "31255": {
+        "name": "Drydock Ave @ Design Center Place",
+        "led": 473
+    },
+    "30250": {
+        "name": "23 Drydock Ave",
+        "led": 475
+    },
+    "31259": {
+        "name": "27 Drydock Ave",
+        "led": 475
+    },
+    "31258": {
+        "name": "88 Black Falcon",
+        "led": 474
+    },
+    "31257": {
+        "name": "Northern Ave @ Tide St",
+        "led": 476
+    },
+    "31256": {
+        "name": "Northern Ave opp Harbor St",
+        "led": 477
+    },
+    "74614": {
+        "name": "Silver Line Way before Manulife Building",
+        "led": 478
+    },
+    "place-brdwy": {
+        "name": "Broadway",
+        "led": 470
+    },
+    "place-andrw": {
+        "name": "Andrew",
+        "led": 469
+    },
+    "place-jfk": {
+        "name": "JFK/Umass",
+        "led": 468
+    },
+    "place-shmnl": {
+        "name": "Savin Hill",
+        "led": 460
+    },
+    "place-fldcr": {
+        "name": "Fields Corner",
+        "led": 459
+    },
+    "place-smmnl": {
+        "name": "Shawmut",
+        "led": 458
+    },
+    "place-nqncy": {
+        "name": "North Quincy",
+        "led": 462
+    },
+    "place-qnctr": {
+        "name": "Quincy Center",
+        "led": 463
+    },
+    "place-qamnl": {
+        "name": "Quincy Adams",
+        "led": 465
+    },
+    "place-bomnl": {
+        "name": "Bowdoin",
+        "led": 28
+    },
+    "place-gover": {
+        "name": "Government Center",
+        "led": 17
+    },
+    "place-state": {
+        "name": "State Street",
+        "led": 482
+    },
+    "place-aqucl": {
+        "name": "Aquarium",
+        "led": 483
+    },
+    "place-mvbcl": {
+        "name": "Maverick",
+        "led": 484
+    },
+    "place-aport": {
+        "name": "Airport",
+        "led": 490
+    },
+    "place-wimnl": {
+        "name": "Wood Island",
+        "led": 491
+    },
+    "place-orhte": {
+        "name": "Orient Heights",
+        "led": 492
+    },
+    "place-sdmnl": {
+        "name": "Suffolk Downs",
+        "led": 493
+    },
+    "place-bmmnl": {
+        "name": "Beachmont",
+        "led": 494
+    },
+    "place-rbmnl": {
+        "name": "Revere Beach",
+        "led": 495
+    },
+    "place-forhl": {
+        "name": "Forest Hills",
+        "led": 50
+    },
+    "place-grnst": {
+        "name": "Green Street",
+        "led": 49
+    },
+    "place-sbmnl": {
+        "name": "Stony Brook",
+        "led": 257
+    },
+    "place-jaksn": {
+        "name": "Jackson Square",
+        "led": 259
+    },
+    "place-rcmnl": {
+        "name": "Roxbury Crossing",
+        "led": 260
+    },
+    "place-rugg": {
+        "name": "Ruggles",
+        "led": 261
+    },
+    "place-masta": {
+        "name": "Massachusetts Ave.",
+        "led": 262
+    },
+    "place-bbsta": {
+        "name": "Back Bay",
+        "led": 8
+    },
+    "64": {
+        "name": "Dudley Station",
+        "led": 2
+    },
+    "3": {
+        "name": "Washington St @ Melnea Cass Blvd - Silver Line",
+        "led": 3
+    },
+    "4": {
+        "name": "Washington St @ Lenox St",
+        "led": 4
+    },
+    "5": {
+        "name": "Washington St @ Massachusetts Ave",
+        "led": 5
+    },
+    "1787": {
+        "name": "Washington St @ Worcester St",
+        "led": 6
+    },
+    "1788": {
+        "name": "Washington St @ E Newton St",
+        "led": 7
+    },
+    "5093": {
+        "name": "Washington St @ Union Pk",
+        "led": 11
+    },
+    "5095": {
+        "name": "Washington St @ E Berkeley St",
+        "led": 10
+    },
+    "15095": {
+        "name": "Washington St @ Herald St",
+        "led": 9
+    },
+    "place-tumnl": {
+        "name": "Tufts Medical Center",
+        "led": 12
+    },
+    "6567": {
+        "name": "Washington St @ Essex St",
+        "led": 13
+    },
+    "49001": {
+        "name": "Temple Pl @ Washington St",
+        "led": -1
+    },
+    "8279": {
+        "name": "Tremont St @ Boylston Station",
+        "led": 14
+    },
+    "6537": {
+        "name": "Washington St @ Essex St",
+        "led": 13
+    },
+    "6538": {
+        "name": "Essex St @ Atlantic Ave",
+        "led": 471
+    },
+    "place-chncl": {
+        "name": "Chinatown",
+        "led": 13
+    },
+    "place-brntn": {
+        "name": "Braintree",
+        "led": 464
+    },
+    "place-asmnl": {
+        "name": "Ashmont",
+        "led": 457
+    },
+    "place-cedgr": {
+        "name": "Cedar Grove",
+        "led": 456
+    },
+    "place-butlr": {
+        "name": "Butler",
+        "led": 455
+    },
+    "place-miltt": {
+        "name": "Milton",
+        "led": 454
+    },
+    "place-cenav": {
+        "name": "Central Ave.",
+        "led": 453
+    },
+    "place-valrd": {
+        "name": "Valley Road",
+        "led": 452
+    },
+    "place-capst": {
+        "name": "Capen Street",
+        "led": 451
+    },
+    "place-matt": {
+        "name": "Mattapan",
+        "led": 450
+    },
+    "place-wondl": {
+        "name": "Wonderland",
+        "led": 496
+    },
+    "place-haecl": {
+        "name": "Haymarket",
+        "led": 18
+    },
+    "place-north": {
+        "name": "North Station",
+        "led": 19
+    },
+    "place-ccmnl": {
+        "name": "Community College",
+        "led": 22
+    },
+    "place-sull": {
+        "name": "Sullivan Square",
+        "led": 21
+    },
+    "place-astao": {
+        "name": "Assembly",
+        "led": 26
+    },
+    "place-welln": {
+        "name": "Wellington",
+        "led": 23
+    },
+    "place-mlmnl": {
+        "name": "Malden Center",
+        "led": 25
+    },
+    "place-spmnl": {
+        "name": "Science Park",
+        "led": 27
+    },
+    "place-ogmnl": {
+        "name": "Oak Grove",
+        "led": 24
+    },
+    "place-lech": {
+        "name": "Lechmere",
+        "led": 20
+    },
+    "49003": {
+        "name": "Washington St @ Herald St",
+        "led": 9
+    },
+    "5098": {
+        "name": "Washington St @ E Berkeley St",
+        "led": 10
+    },
+    "5100": {
+        "name": "Washington St @ Union Pk",
+        "led": 11
+    },
+    "19402": {
+        "name": "Washington St @ W Newton St",
+        "led": 7
+    },
+    "15176": {
+        "name": "Washington St @ Worcester St",
+        "led": 6
+    },
+    "55": {
+        "name": "Washington St @ Massachusetts Ave",
+        "led": 5
+    },
+    "60": {
+        "name": "Washington St @ Lenox St",
+        "led": 4
+    },
+    "61": {
+        "name": "Washington St @ Melnea Cass Blvd",
+        "led": 3
+    }
+}
