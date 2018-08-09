@@ -28,7 +28,8 @@ def get_vehicle_positions():
 
 def light_stop(leds, stop, vehicle):
     if stop not in stop_configuration:
-        raise ValueError("Unexpected stop!")
+        # damn you silver line extension
+        pass
 
     led_id = stop_configuration[stop]['led']
 
