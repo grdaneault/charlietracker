@@ -71,10 +71,8 @@ def should_light_for_direction(current_direction, route_color, train_direction):
 
 def update(client, positions, direction, duration=30):
     leds = [Colors.BLACK] * 512
-    if direction == "Inbound":
-        leds[A_INDICATOR] = Colors.RED
-    else:
-        leds[B_INDICATOR] = Colors.RED
+    leds[direction] = Colors.RED
+
     for stop_id, vehicles in positions.items():
         # if len(vehicles) > 1:
             # print(stop_configuration[stop_id]['name'] + ": " + (", ".join(vehicle.status + " " + vehicle.direction_name for vehicle in vehicles)))
@@ -119,7 +117,7 @@ def main():
         positions = get_vehicle_positions()
         print("done")
         print("inbound... ")
-        update(client, positions, A_INDICATOR , 10)
+        update(client, positions, A_INDICATOR, 10)
         print("outbound... ")
         update(client, positions, B_INDICATOR, 10)
 
