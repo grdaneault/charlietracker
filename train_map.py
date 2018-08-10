@@ -9,8 +9,10 @@ from opc import Client
 
 stop_configuration = json.load(open("stop_configuration.json"))
 
-INBOUND_INDICATOR = 53
-OUTBOUND_INDICATOR = 54
+A_INDICATOR = 53
+B_INDICATOR = 54
+
+DIR_A_LIGHTS = [("GREEN", "Eastbound"), ("RED", "Southbound"), ("BLUE", "Southbound"), ("ORANGE", "Northbound"), ("SILVER", "Inbound")]
 
 
 def get_vehicle_positions():
@@ -28,20 +30,12 @@ def get_vehicle_positions():
 
 def light_stop(leds, stop, vehicle):
     if stop not in stop_configuration:
-        # damn you silver line extension
-        pass
+        # Ignoring unknown stops
+        return
 
     led_id = stop_configuration[stop]['led']
 
-    color_name = "SILVER"
-    if "Red" in vehicle.route.name or "Mattapan" in vehicle.route.name:
-        color_name = "RED"
-    elif "Green" in vehicle.route.name:
-        color_name = "GREEN"
-    elif "Blue" in vehicle.route.name:
-        color_name = "BLUE"
-    elif "Orange" in vehicle.route.name:
-        color_name = "ORANGE"
+    color_name = get_route_color_for_vehicle(vehicle)
 
     if vehicle.status == 'STOPPED_AT':
         leds[led_id] = getattr(Colors, color_name)
@@ -52,37 +46,64 @@ def light_stop(leds, stop, vehicle):
     #     leds[led_id] = getattr(Colors, color_name + "_BLINK_DARK")
 
 
+def get_route_color_for_vehicle(vehicle):
+    color_name = "SILVER"
+    if "Red" in vehicle.route.name or "Mattapan" in vehicle.route.name:
+        color_name = "RED"
+    elif "Green" in vehicle.route.name:
+        color_name = "GREEN"
+    elif "Blue" in vehicle.route.name:
+        color_name = "BLUE"
+    elif "Orange" in vehicle.route.name:
+        color_name = "ORANGE"
+    return color_name
+
+
+def should_light_for_direction(current_direction, route_color, train_direction):
+    in_dir_a = (route_color, train_direction) in DIR_A_LIGHTS
+    if current_direction == A_INDICATOR:
+        print("A DIR - %s train heading %s... %s" % (route_color, train_direction, in_dir_a))
+        return in_dir_a
+    else:
+        print("B DIR - %s train heading %s... %s" % (route_color, train_direction, not in_dir_a))
+        return not in_dir_a
+
+
 def update(client, positions, direction, duration=30):
     leds = [Colors.BLACK] * 512
     if direction == "Inbound":
-        leds[INBOUND_INDICATOR] = Colors.RED
+        leds[A_INDICATOR] = Colors.RED
     else:
-        leds[OUTBOUND_INDICATOR] = Colors.RED
+        leds[B_INDICATOR] = Colors.RED
     for stop_id, vehicles in positions.items():
         # if len(vehicles) > 1:
             # print(stop_configuration[stop_id]['name'] + ": " + (", ".join(vehicle.status + " " + vehicle.direction_name for vehicle in vehicles)))
 
         for vehicle in vehicles:
-            if vehicle.direction_name == direction:
+            color_name = get_route_color_for_vehicle(vehicle)
+            if should_light_for_direction(direction, color_name, vehicle.direction_name):
                 light_stop(leds, stop_id, vehicle)
-            elif direction in vehicle.stop.name:
-                light_stop(leds, stop_id, vehicle)
-            else:
-                if stop_id == "place-pktrm":
-                    if vehicle.direction_name == "Eastbound" and direction == "Inbound":
-                        light_stop(leds, stop_id, vehicle)
-                    elif vehicle.direction_name == "Westbound" and direction == "Outbound":
-                        light_stop(leds, stop_id, vehicle)
-                    elif vehicle.direction_name == "Southbound" and direction == "Inbound":
-                        light_stop(leds, stop_id, vehicle)
-                    elif vehicle.direction_name == "Northbound" and direction == "Outbound":
-                        light_stop(leds, stop_id, vehicle)
-                elif stop_id == "place-dwnxg":
-                    if vehicle.direction_name == "Northbound" and direction == "Outbound":
-                        light_stop(leds, stop_id, vehicle)
-                    elif vehicle.direction_name == "Southbound" and direction == "Inbound":
-                        light_stop(leds, stop_id, vehicle)
-        # light_stop(leds, stop_id, None)
+
+        #     if vehicle.direction_name == direction:
+        #         light_stop(leds, stop_id, vehicle)
+        #     elif direction in vehicle.stop.name:
+        #         light_stop(leds, stop_id, vehicle)
+        #     else:
+        #         if stop_id == "place-pktrm":
+        #             if vehicle.direction_name == "Eastbound" and direction == "Inbound":
+        #                 light_stop(leds, stop_id, vehicle)
+        #             elif vehicle.direction_name == "Westbound" and direction == "Outbound":
+        #                 light_stop(leds, stop_id, vehicle)
+        #             elif vehicle.direction_name == "Southbound" and direction == "Inbound":
+        #                 light_stop(leds, stop_id, vehicle)
+        #             elif vehicle.direction_name == "Northbound" and direction == "Outbound":
+        #                 light_stop(leds, stop_id, vehicle)
+        #         elif stop_id == "place-dwnxg":
+        #             if vehicle.direction_name == "Northbound" and direction == "Outbound":
+        #                 light_stop(leds, stop_id, vehicle)
+        #             elif vehicle.direction_name == "Southbound" and direction == "Inbound":
+        #                 light_stop(leds, stop_id, vehicle)
+        # # light_stop(leds, stop_id, None)
 
     client.put_pixels([px.render(0) for px in leds])
     for i in range(duration):
@@ -98,9 +119,9 @@ def main():
         positions = get_vehicle_positions()
         print("done")
         print("inbound... ")
-        update(client, positions, "Inbound", 10)
+        update(client, positions, A_INDICATOR , 10)
         print("outbound... ")
-        update(client, positions, "Outbound", 10)
+        update(client, positions, B_INDICATOR, 10)
 
 if __name__ == '__main__':
     main()
