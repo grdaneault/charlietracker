@@ -1,6 +1,8 @@
 import json
 
 import time
+
+from jsonapi_requests.request_factory import ApiConnectionError
 from mbta import Vehicle
 from collections import defaultdict
 
@@ -107,19 +109,28 @@ def update(client, positions, direction, duration=30):
     for i in range(duration):
         client.put_pixels([px.render(i) for px in leds])
         time.sleep(1)
-        i += 1
+
 
 def main():
     client = Client('localhost:7890')
+    leds = [Colors.GREEN] * 512
+    client.put_pixels([px.render(0) for px in leds])
 
     while True:
-        print('Updating... ', end="")
-        positions = get_vehicle_positions()
-        print("done")
-        print("inbound... ")
-        update(client, positions, A_INDICATOR, 10)
-        print("outbound... ")
-        update(client, positions, B_INDICATOR, 10)
+        try:
+            print('Updating... ', end="")
+            positions = get_vehicle_positions()
+            print("done")
+            print("inbound... ")
+            update(client, positions, A_INDICATOR, 10)
+            print("outbound... ")
+            update(client, positions, B_INDICATOR, 10)
+        except ApiConnectionError as e:
+            leds = [Colors.RED_BLINK] * 512
+            for i in range(30):
+                client.put_pixels([px.render(i) for px in leds])
+                time.sleep(1)
+
 
 if __name__ == '__main__':
     main()
